@@ -15,7 +15,6 @@
 		A41939101474996200753DAF /* JCEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A419390F1474996200753DAF /* JCEAppDelegate.m */; };
 		A41939131474996200753DAF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41939111474996200753DAF /* MainStoryboard.storyboard */; };
 		A41939161474996200753DAF /* JCEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A41939151474996200753DAF /* JCEViewController.m */; };
-		A419391F14749A7A00753DAF /* README in Resources */ = {isa = PBXBuildFile; fileRef = A419391E14749A7A00753DAF /* README */; };
 		A419392114749AC500753DAF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A419392014749AC500753DAF /* AVFoundation.framework */; };
 		A419392414749AF100753DAF /* ImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A419392314749AF100753DAF /* ImageManager.m */; };
 		A41939261474A2D000753DAF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41939251474A2D000753DAF /* MobileCoreServices.framework */; };
@@ -31,6 +30,7 @@
 		A45DAFA61474EA57001559F4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45DAFA51474EA57001559F4 /* AudioToolbox.framework */; };
 		A45DAFA81474FA5A001559F4 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A45DAFA71474FA5A001559F4 /* icon.png */; };
 		A45DAFAA1474FA5E001559F4 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A45DAFA91474FA5E001559F4 /* icon@2x.png */; };
+		A45DAFAC1474FC4E001559F4 /* README in Resources */ = {isa = PBXBuildFile; fileRef = A45DAFAB1474FC4E001559F4 /* README */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +47,6 @@
 		A41939121474996200753DAF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		A41939141474996200753DAF /* JCEViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCEViewController.h; sourceTree = "<group>"; };
 		A41939151474996200753DAF /* JCEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCEViewController.m; sourceTree = "<group>"; };
-		A419391E14749A7A00753DAF /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		A419392014749AC500753DAF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A419392214749AF100753DAF /* ImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageManager.h; sourceTree = "<group>"; };
 		A419392314749AF100753DAF /* ImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageManager.m; sourceTree = "<group>"; };
@@ -64,6 +63,7 @@
 		A45DAFA51474EA57001559F4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A45DAFA71474FA5A001559F4 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		A45DAFA91474FA5E001559F4 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		A45DAFAB1474FC4E001559F4 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +99,7 @@
 				A41938FE1474996100753DAF /* Frameworks */,
 				A45DAF891474AB77001559F4 /* Libraries */,
 				A41938FC1474996100753DAF /* Products */,
+				A45DAFAB1474FC4E001559F4 /* README */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,7 +150,6 @@
 				A41939081474996200753DAF /* InfoPlist.strings */,
 				A419390B1474996200753DAF /* main.m */,
 				A419390D1474996200753DAF /* Jucie-Prefix.pch */,
-				A419391E14749A7A00753DAF /* README */,
 				A45DAFA11474E9BA001559F4 /* F.aif */,
 				A45DAFA21474E9BA001559F4 /* C.aif */,
 			);
@@ -218,11 +218,11 @@
 			files = (
 				A419390A1474996200753DAF /* InfoPlist.strings in Resources */,
 				A41939131474996200753DAF /* MainStoryboard.storyboard in Resources */,
-				A419391F14749A7A00753DAF /* README in Resources */,
 				A45DAFA31474E9BA001559F4 /* F.aif in Resources */,
 				A45DAFA41474E9BA001559F4 /* C.aif in Resources */,
 				A45DAFA81474FA5A001559F4 /* icon.png in Resources */,
 				A45DAFAA1474FA5E001559F4 /* icon@2x.png in Resources */,
+				A45DAFAC1474FC4E001559F4 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
