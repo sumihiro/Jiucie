@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A41939001474996200753DAF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41938FF1474996200753DAF /* UIKit.framework */; };
+		A41939021474996200753DAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41939011474996200753DAF /* Foundation.framework */; };
+		A41939041474996200753DAF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41939031474996200753DAF /* CoreGraphics.framework */; };
+		A419390A1474996200753DAF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A41939081474996200753DAF /* InfoPlist.strings */; };
+		A419390C1474996200753DAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A419390B1474996200753DAF /* main.m */; };
+		A41939101474996200753DAF /* JCEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A419390F1474996200753DAF /* JCEAppDelegate.m */; };
+		A41939131474996200753DAF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41939111474996200753DAF /* MainStoryboard.storyboard */; };
+		A41939161474996200753DAF /* JCEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A41939151474996200753DAF /* JCEViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A41938FB1474996100753DAF /* Jucie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jucie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A41938FF1474996200753DAF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A41939011474996200753DAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A41939031474996200753DAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A41939071474996200753DAF /* Jucie-Info.plist */ = {isa = PBXFileReference; path = "Jucie-Info.plist"; sourceTree = "<group>"; };
+		A41939091474996200753DAF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A419390B1474996200753DAF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A419390D1474996200753DAF /* Jucie-Prefix.pch */ = {isa = PBXFileReference; path = "Jucie-Prefix.pch"; sourceTree = "<group>"; };
+		A419390E1474996200753DAF /* JCEAppDelegate.h */ = {isa = PBXFileReference; path = JCEAppDelegate.h; sourceTree = "<group>"; };
+		A419390F1474996200753DAF /* JCEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCEAppDelegate.m; sourceTree = "<group>"; };
+		A41939121474996200753DAF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		A41939141474996200753DAF /* JCEViewController.h */ = {isa = PBXFileReference; path = JCEViewController.h; sourceTree = "<group>"; };
+		A41939151474996200753DAF /* JCEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCEViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A41938F81474996100753DAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A41939001474996200753DAF /* UIKit.framework in Frameworks */,
+				A41939021474996200753DAF /* Foundation.framework in Frameworks */,
+				A41939041474996200753DAF /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A41938F01474996100753DAF = {
+			isa = PBXGroup;
+			children = (
+				A41939051474996200753DAF /* Jucie */,
+				A41938FE1474996100753DAF /* Frameworks */,
+				A41938FC1474996100753DAF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A41938FC1474996100753DAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A41938FB1474996100753DAF /* Jucie.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A41938FE1474996100753DAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A41938FF1474996200753DAF /* UIKit.framework */,
+				A41939011474996200753DAF /* Foundation.framework */,
+				A41939031474996200753DAF /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A41939051474996200753DAF /* Jucie */ = {
+			isa = PBXGroup;
+			children = (
+				A419390E1474996200753DAF /* JCEAppDelegate.h */,
+				A419390F1474996200753DAF /* JCEAppDelegate.m */,
+				A41939111474996200753DAF /* MainStoryboard.storyboard */,
+				A41939141474996200753DAF /* JCEViewController.h */,
+				A41939151474996200753DAF /* JCEViewController.m */,
+				A41939061474996200753DAF /* Supporting Files */,
+			);
+			path = Jucie;
+			sourceTree = "<group>";
+		};
+		A41939061474996200753DAF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A41939071474996200753DAF /* Jucie-Info.plist */,
+				A41939081474996200753DAF /* InfoPlist.strings */,
+				A419390B1474996200753DAF /* main.m */,
+				A419390D1474996200753DAF /* Jucie-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A41938FA1474996100753DAF /* Jucie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A41939191474996200753DAF /* Build configuration list for PBXNativeTarget "Jucie" */;
+			buildPhases = (
+				A41938F71474996100753DAF /* Sources */,
+				A41938F81474996100753DAF /* Frameworks */,
+				A41938F91474996100753DAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Jucie;
+			productName = Jucie;
+			productReference = A41938FB1474996100753DAF /* Jucie.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A41938F21474996100753DAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = A41938F51474996100753DAF /* Build configuration list for PBXProject "Jucie" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A41938F01474996100753DAF;
+			productRefGroup = A41938FC1474996100753DAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A41938FA1474996100753DAF /* Jucie */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A41938F91474996100753DAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A419390A1474996200753DAF /* InfoPlist.strings in Resources */,
+				A41939131474996200753DAF /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A41938F71474996100753DAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A419390C1474996200753DAF /* main.m in Sources */,
+				A41939101474996200753DAF /* JCEAppDelegate.m in Sources */,
+				A41939161474996200753DAF /* JCEViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A41939081474996200753DAF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A41939091474996200753DAF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A41939111474996200753DAF /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A41939121474996200753DAF /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A41939171474996200753DAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A41939181474996200753DAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A419391A1474996200753DAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Jucie/Jucie-Prefix.pch";
+				INFOPLIST_FILE = "Jucie/Jucie-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A419391B1474996200753DAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Jucie/Jucie-Prefix.pch";
+				INFOPLIST_FILE = "Jucie/Jucie-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A41938F51474996100753DAF /* Build configuration list for PBXProject "Jucie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A41939171474996200753DAF /* Debug */,
+				A41939181474996200753DAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A41939191474996200753DAF /* Build configuration list for PBXNativeTarget "Jucie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A419391A1474996200753DAF /* Debug */,
+				A419391B1474996200753DAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A41938F21474996100753DAF /* Project object */;
+}
