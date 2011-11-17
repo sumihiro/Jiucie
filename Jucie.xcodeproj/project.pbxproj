@@ -15,6 +15,22 @@
 		A41939101474996200753DAF /* JCEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A419390F1474996200753DAF /* JCEAppDelegate.m */; };
 		A41939131474996200753DAF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41939111474996200753DAF /* MainStoryboard.storyboard */; };
 		A41939161474996200753DAF /* JCEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A41939151474996200753DAF /* JCEViewController.m */; };
+		A419391F14749A7A00753DAF /* README in Resources */ = {isa = PBXBuildFile; fileRef = A419391E14749A7A00753DAF /* README */; };
+		A419392114749AC500753DAF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A419392014749AC500753DAF /* AVFoundation.framework */; };
+		A419392414749AF100753DAF /* ImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A419392314749AF100753DAF /* ImageManager.m */; };
+		A41939261474A2D000753DAF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41939251474A2D000753DAF /* MobileCoreServices.framework */; };
+		A41939281474A33F00753DAF /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41939271474A33F00753DAF /* CoreMedia.framework */; };
+		A419392A1474A36500753DAF /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41939291474A36500753DAF /* CoreVideo.framework */; };
+		A45DAF881474AB18001559F4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45DAF871474AB18001559F4 /* Accelerate.framework */; };
+		A45DAF8D1474AB99001559F4 /* libopencv_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A45DAF8A1474AB99001559F4 /* libopencv_core.a */; };
+		A45DAF8E1474AB99001559F4 /* libopencv_imgproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A45DAF8B1474AB99001559F4 /* libopencv_imgproc.a */; };
+		A45DAF8F1474AB99001559F4 /* libopencv_objdetect.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A45DAF8C1474AB99001559F4 /* libopencv_objdetect.a */; };
+		A45DAF951474B903001559F4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45DAF941474B903001559F4 /* QuartzCore.framework */; };
+		A45DAFA31474E9BA001559F4 /* F.aif in Resources */ = {isa = PBXBuildFile; fileRef = A45DAFA11474E9BA001559F4 /* F.aif */; };
+		A45DAFA41474E9BA001559F4 /* C.aif in Resources */ = {isa = PBXBuildFile; fileRef = A45DAFA21474E9BA001559F4 /* C.aif */; };
+		A45DAFA61474EA57001559F4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A45DAFA51474EA57001559F4 /* AudioToolbox.framework */; };
+		A45DAFA81474FA5A001559F4 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A45DAFA71474FA5A001559F4 /* icon.png */; };
+		A45DAFAA1474FA5E001559F4 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A45DAFA91474FA5E001559F4 /* icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +38,32 @@
 		A41938FF1474996200753DAF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A41939011474996200753DAF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A41939031474996200753DAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A41939071474996200753DAF /* Jucie-Info.plist */ = {isa = PBXFileReference; path = "Jucie-Info.plist"; sourceTree = "<group>"; };
+		A41939071474996200753DAF /* Jucie-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Jucie-Info.plist"; sourceTree = "<group>"; };
 		A41939091474996200753DAF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A419390B1474996200753DAF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A419390D1474996200753DAF /* Jucie-Prefix.pch */ = {isa = PBXFileReference; path = "Jucie-Prefix.pch"; sourceTree = "<group>"; };
-		A419390E1474996200753DAF /* JCEAppDelegate.h */ = {isa = PBXFileReference; path = JCEAppDelegate.h; sourceTree = "<group>"; };
+		A419390D1474996200753DAF /* Jucie-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Jucie-Prefix.pch"; sourceTree = "<group>"; };
+		A419390E1474996200753DAF /* JCEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCEAppDelegate.h; sourceTree = "<group>"; };
 		A419390F1474996200753DAF /* JCEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCEAppDelegate.m; sourceTree = "<group>"; };
 		A41939121474996200753DAF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		A41939141474996200753DAF /* JCEViewController.h */ = {isa = PBXFileReference; path = JCEViewController.h; sourceTree = "<group>"; };
+		A41939141474996200753DAF /* JCEViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCEViewController.h; sourceTree = "<group>"; };
 		A41939151474996200753DAF /* JCEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCEViewController.m; sourceTree = "<group>"; };
+		A419391E14749A7A00753DAF /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		A419392014749AC500753DAF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A419392214749AF100753DAF /* ImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageManager.h; sourceTree = "<group>"; };
+		A419392314749AF100753DAF /* ImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageManager.m; sourceTree = "<group>"; };
+		A41939251474A2D000753DAF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A41939271474A33F00753DAF /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		A41939291474A36500753DAF /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		A45DAF871474AB18001559F4 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		A45DAF8A1474AB99001559F4 /* libopencv_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_core.a; path = opencv_device/lib/libopencv_core.a; sourceTree = "<group>"; };
+		A45DAF8B1474AB99001559F4 /* libopencv_imgproc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_imgproc.a; path = opencv_device/lib/libopencv_imgproc.a; sourceTree = "<group>"; };
+		A45DAF8C1474AB99001559F4 /* libopencv_objdetect.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopencv_objdetect.a; path = opencv_device/lib/libopencv_objdetect.a; sourceTree = "<group>"; };
+		A45DAF941474B903001559F4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A45DAFA11474E9BA001559F4 /* F.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = F.aif; sourceTree = "<group>"; };
+		A45DAFA21474E9BA001559F4 /* C.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = C.aif; sourceTree = "<group>"; };
+		A45DAFA51474EA57001559F4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A45DAFA71474FA5A001559F4 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		A45DAFA91474FA5E001559F4 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,9 +71,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A45DAFA61474EA57001559F4 /* AudioToolbox.framework in Frameworks */,
+				A45DAF951474B903001559F4 /* QuartzCore.framework in Frameworks */,
+				A45DAF881474AB18001559F4 /* Accelerate.framework in Frameworks */,
+				A419392A1474A36500753DAF /* CoreVideo.framework in Frameworks */,
+				A41939281474A33F00753DAF /* CoreMedia.framework in Frameworks */,
+				A41939261474A2D000753DAF /* MobileCoreServices.framework in Frameworks */,
+				A419392114749AC500753DAF /* AVFoundation.framework in Frameworks */,
 				A41939001474996200753DAF /* UIKit.framework in Frameworks */,
 				A41939021474996200753DAF /* Foundation.framework in Frameworks */,
 				A41939041474996200753DAF /* CoreGraphics.framework in Frameworks */,
+				A45DAF8D1474AB99001559F4 /* libopencv_core.a in Frameworks */,
+				A45DAF8E1474AB99001559F4 /* libopencv_imgproc.a in Frameworks */,
+				A45DAF8F1474AB99001559F4 /* libopencv_objdetect.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,8 +93,11 @@
 		A41938F01474996100753DAF = {
 			isa = PBXGroup;
 			children = (
+				A45DAFA91474FA5E001559F4 /* icon@2x.png */,
+				A45DAFA71474FA5A001559F4 /* icon.png */,
 				A41939051474996200753DAF /* Jucie */,
 				A41938FE1474996100753DAF /* Frameworks */,
+				A45DAF891474AB77001559F4 /* Libraries */,
 				A41938FC1474996100753DAF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +113,13 @@
 		A41938FE1474996100753DAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A45DAFA51474EA57001559F4 /* AudioToolbox.framework */,
+				A45DAF941474B903001559F4 /* QuartzCore.framework */,
+				A45DAF871474AB18001559F4 /* Accelerate.framework */,
+				A41939291474A36500753DAF /* CoreVideo.framework */,
+				A41939271474A33F00753DAF /* CoreMedia.framework */,
+				A41939251474A2D000753DAF /* MobileCoreServices.framework */,
+				A419392014749AC500753DAF /* AVFoundation.framework */,
 				A41938FF1474996200753DAF /* UIKit.framework */,
 				A41939011474996200753DAF /* Foundation.framework */,
 				A41939031474996200753DAF /* CoreGraphics.framework */,
@@ -83,6 +136,8 @@
 				A41939141474996200753DAF /* JCEViewController.h */,
 				A41939151474996200753DAF /* JCEViewController.m */,
 				A41939061474996200753DAF /* Supporting Files */,
+				A419392214749AF100753DAF /* ImageManager.h */,
+				A419392314749AF100753DAF /* ImageManager.m */,
 			);
 			path = Jucie;
 			sourceTree = "<group>";
@@ -94,8 +149,21 @@
 				A41939081474996200753DAF /* InfoPlist.strings */,
 				A419390B1474996200753DAF /* main.m */,
 				A419390D1474996200753DAF /* Jucie-Prefix.pch */,
+				A419391E14749A7A00753DAF /* README */,
+				A45DAFA11474E9BA001559F4 /* F.aif */,
+				A45DAFA21474E9BA001559F4 /* C.aif */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A45DAF891474AB77001559F4 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				A45DAF8A1474AB99001559F4 /* libopencv_core.a */,
+				A45DAF8B1474AB99001559F4 /* libopencv_imgproc.a */,
+				A45DAF8C1474AB99001559F4 /* libopencv_objdetect.a */,
+			);
+			name = Libraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +218,11 @@
 			files = (
 				A419390A1474996200753DAF /* InfoPlist.strings in Resources */,
 				A41939131474996200753DAF /* MainStoryboard.storyboard in Resources */,
+				A419391F14749A7A00753DAF /* README in Resources */,
+				A45DAFA31474E9BA001559F4 /* F.aif in Resources */,
+				A45DAFA41474E9BA001559F4 /* C.aif in Resources */,
+				A45DAFA81474FA5A001559F4 /* icon.png in Resources */,
+				A45DAFAA1474FA5E001559F4 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +236,7 @@
 				A419390C1474996200753DAF /* main.m in Sources */,
 				A41939101474996200753DAF /* JCEAppDelegate.m in Sources */,
 				A41939161474996200753DAF /* JCEViewController.m in Sources */,
+				A419392414749AF100753DAF /* ImageManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +312,20 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Jucie/Jucie-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
+				"HEADER_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = "\"$(SRCROOT)/opencv_device/include\"";
+				"HEADER_SEARCH_PATHS[sdk=iphonesimulator*][arch=*]" = "\"$(SRCROOT)/opencv_simulator/include\"";
 				INFOPLIST_FILE = "Jucie/Jucie-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/opencv_device/lib\"",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = "\"$(SRCROOT)/opencv_device/lib\"";
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*][arch=*]" = "\"$(SRCROOT)/opencv_simulator/lib\"";
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-lz",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -249,7 +336,20 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Jucie/Jucie-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
+				"HEADER_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = "\"$(SRCROOT)/opencv_device/include\"";
+				"HEADER_SEARCH_PATHS[sdk=iphonesimulator*][arch=*]" = "\"$(SRCROOT)/opencv_simulator/include\"";
 				INFOPLIST_FILE = "Jucie/Jucie-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/opencv_device/lib\"",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*][arch=*]" = "\"$(SRCROOT)/opencv_device/lib\"";
+				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*][arch=*]" = "\"$(SRCROOT)/opencv_simulator/lib\"";
+				OTHER_LDFLAGS = (
+					"-lstdc++",
+					"-lz",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -274,6 +374,7 @@
 				A419391B1474996200753DAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
