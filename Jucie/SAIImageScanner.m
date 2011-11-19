@@ -1,36 +1,40 @@
 //
-//  ImageManager.m
+//  SAIImageScanner.m
 //  Jucie
 //
-//  Created by 上田 澄博 on 11/11/17.
+//  Created by 上田 澄博 on 11/11/19.
 //  Copyright (c) 2011年 __MyCompanyName__. All rights reserved.
 //
 
-#import "ImageManager.h"
 #import <CoreMedia/CoreMedia.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <opencv2/imgproc/imgproc_c.h>
 
-#define MAX_DIST 0.3
-#define MIN_DIST 0.1
+#import "SAIImageScanner.h"
 
+#define MAX_DIST 0.1
+#define MIN_DIST 0.05
 
 typedef enum WaitingMode {
 	WaitingModeDynamic,
 	WaitingModeStatic
 } WaitingMode;
 
-@interface ImageManager ()
+@interface SAIImageScanner ()
 
+// フレームレート計算用の配列
 @property (nonatomic,strong) NSMutableArray *previousSecondTimestamps;
 
+// ビデオキャプチャ
 @property (nonatomic,strong) AVCaptureSession *captureSession;
 @property (nonatomic,strong) AVCaptureConnection *videoConnection;
 
+// ヒストリによる動静判定用の各変数
 @property (nonatomic,readwrite) CvHistogram *prevHist;
 @property (nonatomic,readwrite) double prevDistance;
 @property (nonatomic,readwrite) double distance;
 @property (nonatomic,readwrite) WaitingMode waitingMode;
+
 
 - (void)processPixelBuffer: (CVImageBufferRef)pixelBuffer;
 - (void)calculateFramerateAtTimestamp:(CMTime) timestamp;
@@ -43,11 +47,13 @@ typedef enum WaitingMode {
 
 @end
 
-
-@implementation ImageManager
+@implementation SAIImageScanner
 
 @synthesize delegate;
-@synthesize previewLayer=_previewLayer;
+
+@synthesize distanceThresholdMax;
+@synthesize distanceThresholdMin;
+@synthesize useHistogramImage;
 
 @synthesize previousSecondTimestamps;
 @synthesize videoFrameRate;
@@ -63,6 +69,9 @@ typedef enum WaitingMode {
     self = [super init];
     if (self) {
         self.previousSecondTimestamps = [[NSMutableArray alloc] init];
+		self.distanceThresholdMax = MAX_DIST;
+		self.distanceThresholdMin = MIN_DIST;
+		self.useHistogramImage = NO;
     }
     return self;
 }
@@ -72,7 +81,7 @@ typedef enum WaitingMode {
 - (void)processPixelBuffer: (CVImageBufferRef)pixelBuffer 
 {
     CVPixelBufferLockBaseAddress( pixelBuffer, 0 );
- 
+	
 	@autoreleasepool {
 		CGImageRef imageRef = [self createCgImageFromCVImageBuffer:pixelBuffer];
 		IplImage *image = [self createIplImageFromCGImage:imageRef];
@@ -92,38 +101,40 @@ typedef enum WaitingMode {
 		if (prevHist) {
 			self.distance = cvCompareHist(hist, prevHist, CV_COMP_BHATTACHARYYA);
 			
-			[self.delegate distanceDidChange:self.distance];
+			[self.delegate imageScanner:self didChangeDistance:self.distance];
 			
 			cvReleaseHist(&prevHist);
 		}
-
+		
 		cvReleaseImage(&dstImage);
 		cvReleaseImage(&image);
 		
-		[self.delegate didCaptureImage:imageRef];
-		[self.delegate didDrawHistgramImage:[self drawHistgram:hist]];
+		[self.delegate imageScanner:self didCaptureImage:imageRef];
+		if (useHistogramImage) {
+			[self.delegate imageScanner:self didDrawHistgramImage:[self drawHistgram:hist]];
+		}
 		
 		switch (self.waitingMode) {
 			case WaitingModeStatic: // 動いている状態から止まる状態を待っている
-				if (self.distance < MIN_DIST && self.prevDistance >= MIN_DIST) {
+				if (self.distance < self.distanceThresholdMin && self.prevDistance >= self.distanceThresholdMin) {
 					self.waitingMode = WaitingModeDynamic;
-					[self.delegate didCaptureImageAtStatic:imageRef];
+					[self.delegate imageScanner:self didCaptureImageAtStatic:imageRef];
 				}
 				break;
 			case WaitingModeDynamic: // 止まっている状態から動いている状態を待っている
-				if (self.distance > MAX_DIST && self.prevDistance <= MAX_DIST) {
+				if (self.distance > self.distanceThresholdMax && self.prevDistance <= self.distanceThresholdMax) {
 					self.waitingMode = WaitingModeStatic;
-					[self.delegate didCaptureImageAtDynamic:imageRef];
+					[self.delegate imageScanner:self didCaptureImageAtDynamic:imageRef];
 				}
 				break;
 			default:
 				break;
 		}
-
+		
 		self.prevDistance = distance;
 		self.prevHist = hist;
 		
-
+		
 		CGImageRelease(imageRef);
 	}
 	
@@ -212,7 +223,7 @@ typedef enum WaitingMode {
 }
 - (void)stopCapture {
 	[self.captureSession stopRunning];
-
+	
 	if (prevHist) {
 		cvReleaseHist(&prevHist);
 		prevHist = NULL;
@@ -232,7 +243,7 @@ typedef enum WaitingMode {
         [self.previousSecondTimestamps removeObjectAtIndex:0];
     
     Float64 newRate = (Float64) [self.previousSecondTimestamps count];
-    self.videoFrameRate = (self.videoFrameRate + newRate) / 2;
+    videoFrameRate = (self.videoFrameRate + newRate) / 2;
 }
 
 - (CGImageRef)createCgImageFromCVImageBuffer:(CVImageBufferRef)pixelBuffer {
@@ -282,12 +293,12 @@ typedef enum WaitingMode {
 	CGSize imageSize = CGSizeMake(256, 256);
 	
 	CvHistogram *h;
-
+	
 	int histSize = 256;
 	float range[] = {0,256};
 	float *ranges[] = {range};
 	h = cvCreateHist(1, &histSize, CV_HIST_ARRAY, ranges, 1);
-
+	
 	//cvCopyHist(histgram, &h);
 	
 	float max = 0;
@@ -326,17 +337,6 @@ typedef enum WaitingMode {
                                                   otherButtonTitles:nil];
         [alertView show];
     });
-}
-
-#pragma mark -
--(AVCaptureVideoPreviewLayer*)previewLayer {
-	if (!_previewLayer) {
-		if (self.captureSession) {
-			_previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:self.captureSession];
-		}
-	}
-	
-	return _previewLayer;
 }
 
 @end

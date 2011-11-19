@@ -9,11 +9,11 @@
 #import <AVFoundation/AVFoundation.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import "JCEViewController.h"
-#import "ImageManager.h"
+#import "SAIImageScanner.h"
 
 @interface JCEViewController ()
 
-@property (nonatomic,strong) ImageManager *iManager;
+@property (nonatomic,strong) SAIImageScanner *iManager;
 @property (nonatomic,readwrite) SystemSoundID alertSoundIDC;
 @property (nonatomic,readwrite) SystemSoundID alertSoundIDF;
 
@@ -40,8 +40,9 @@
 	url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"F" ofType:@"aif"] isDirectory:NO];
 	AudioServicesCreateSystemSoundID((__bridge CFURLRef)url, &alertSoundIDF);
 
-	self.iManager = [[ImageManager alloc] init];
+	self.iManager = [[SAIImageScanner alloc] init];
 	self.iManager.delegate = self;
+	self.iManager.useHistogramImage = YES;
 	[self.iManager startCapture];
 }
 
@@ -101,31 +102,31 @@
 }
 
 #pragma mark -
-- (void)pixelBufferReadyForDisplay:(CVImageBufferRef)pixelBufferRef {
+- (void)imageScanner:(SAIImageScanner*)imageScanner pixelBufferReadyForDisplay:(CVImageBufferRef)pixelBufferRef {
 	
 }
 
-- (void)distanceDidChange:(double)distance {
+-(void)imageScanner:(SAIImageScanner *)imageScanner didChangeDistance:(double)distance {
 	NSLog(@"distance: %f",distance);
 	dispatch_async(dispatch_get_main_queue(), ^{
 		self.distanceLabel.text = [NSString stringWithFormat:@"%0.4f dis",distance];
 	});
 }
 
-- (void)didCaptureImage:(CGImageRef)imageRef {
+-(void)imageScanner:(SAIImageScanner *)imageScanner didCaptureImage:(CGImageRef)imageRef {
 	dispatch_async(dispatch_get_main_queue(), ^{
 		self.capturedImageView.image = [UIImage imageWithCGImage:imageRef];
 		self.fpsLabel.text = [NSString stringWithFormat:@"%0.2f fps",self.iManager.videoFrameRate];
 	});
 }
 
-- (void)didDrawHistgramImage:(UIImage*)image {
+-(void)imageScanner:(SAIImageScanner *)imageScanner didDrawHistgramImage:(UIImage *)image {
 	dispatch_async(dispatch_get_main_queue(), ^{
 		self.histgramImageView.image = image;
 	});
 }
 
-- (void)didCaptureImageAtDynamic:(CGImageRef)imageRef {
+-(void)imageScanner:(SAIImageScanner *)imageScanner didCaptureImageAtDynamic:(CGImageRef)imageRef {
 	UIImage *image = [UIImage imageWithCGImage:imageRef];
 	dispatch_async(dispatch_get_main_queue(), ^{
 		self.dynamicImageView.image = image;
@@ -135,7 +136,7 @@
 	});
 }
 
-- (void)didCaptureImageAtStatic:(CGImageRef)imageRef {
+-(void)imageScanner:(SAIImageScanner *)imageScanner didCaptureImageAtStatic:(CGImageRef)imageRef {
 	UIImage *image = [UIImage imageWithCGImage:imageRef];
 	if (self.saveSwitch.on) {
 		UIImageWriteToSavedPhotosAlbum(image, nil, NULL, NULL);

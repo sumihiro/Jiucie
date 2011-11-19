@@ -16,7 +16,7 @@
 		A41939131474996200753DAF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41939111474996200753DAF /* MainStoryboard.storyboard */; };
 		A41939161474996200753DAF /* JCEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A41939151474996200753DAF /* JCEViewController.m */; };
 		A419392114749AC500753DAF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A419392014749AC500753DAF /* AVFoundation.framework */; };
-		A419392414749AF100753DAF /* ImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A419392314749AF100753DAF /* ImageManager.m */; };
+		A419392414749AF100753DAF /* SAIImageScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = A419392314749AF100753DAF /* SAIImageScanner.m */; };
 		A41939261474A2D000753DAF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41939251474A2D000753DAF /* MobileCoreServices.framework */; };
 		A41939281474A33F00753DAF /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41939271474A33F00753DAF /* CoreMedia.framework */; };
 		A419392A1474A36500753DAF /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41939291474A36500753DAF /* CoreVideo.framework */; };
@@ -48,8 +48,8 @@
 		A41939141474996200753DAF /* JCEViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCEViewController.h; sourceTree = "<group>"; };
 		A41939151474996200753DAF /* JCEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCEViewController.m; sourceTree = "<group>"; };
 		A419392014749AC500753DAF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		A419392214749AF100753DAF /* ImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageManager.h; sourceTree = "<group>"; };
-		A419392314749AF100753DAF /* ImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageManager.m; sourceTree = "<group>"; };
+		A419392214749AF100753DAF /* SAIImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAIImageScanner.h; sourceTree = "<group>"; };
+		A419392314749AF100753DAF /* SAIImageScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAIImageScanner.m; sourceTree = "<group>"; };
 		A41939251474A2D000753DAF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		A41939271474A33F00753DAF /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		A41939291474A36500753DAF /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
@@ -131,14 +131,13 @@
 		A41939051474996200753DAF /* Jucie */ = {
 			isa = PBXGroup;
 			children = (
+				A4925354147774A700D8393D /* Scanner */,
 				A419390E1474996200753DAF /* JCEAppDelegate.h */,
 				A419390F1474996200753DAF /* JCEAppDelegate.m */,
 				A41939111474996200753DAF /* MainStoryboard.storyboard */,
 				A41939141474996200753DAF /* JCEViewController.h */,
 				A41939151474996200753DAF /* JCEViewController.m */,
 				A41939061474996200753DAF /* Supporting Files */,
-				A419392214749AF100753DAF /* ImageManager.h */,
-				A419392314749AF100753DAF /* ImageManager.m */,
 			);
 			path = Jucie;
 			sourceTree = "<group>";
@@ -164,6 +163,15 @@
 				A45DAF8C1474AB99001559F4 /* libopencv_objdetect.a */,
 			);
 			name = Libraries;
+			sourceTree = "<group>";
+		};
+		A4925354147774A700D8393D /* Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				A419392214749AF100753DAF /* SAIImageScanner.h */,
+				A419392314749AF100753DAF /* SAIImageScanner.m */,
+			);
+			name = Scanner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +244,7 @@
 				A419390C1474996200753DAF /* main.m in Sources */,
 				A41939101474996200753DAF /* JCEAppDelegate.m in Sources */,
 				A41939161474996200753DAF /* JCEViewController.m in Sources */,
-				A419392414749AF100753DAF /* ImageManager.m in Sources */,
+				A419392414749AF100753DAF /* SAIImageScanner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ImageManager.h"
+#import "SAIImageScanner.h"
 
-@interface JCEViewController : UIViewController <ImageManagerDelegate>
+@interface JCEViewController : UIViewController <SAIImageScannerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIImageView *staticImageView;
 @property (strong, nonatomic) IBOutlet UIImageView *dynamicImageView;
